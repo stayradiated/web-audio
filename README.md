@@ -1,4 +1,4 @@
-# Web Audio Stream
+# @stayradiated/web-audio
 
 So you want the power of the Web Audio API but with support for streaming audio
 files? Then this library is for you.
@@ -13,7 +13,7 @@ on them.
 This is just an example of how to use the library at the moment:
 
 ```
-import WebAudioStream from 'web-audio-stream'
+import WebAudioStream from '@stayradiated/web-audio'
 
 const stream = new WebAudioStream({
   context: new window.AudioContext(),

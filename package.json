@@ -34,5 +34,8 @@
       "babel-register"
     ],
     "babel": "inherit"
+  },
+  "dependencies": {
+    "nop": "^1.0.0"
   }
 }

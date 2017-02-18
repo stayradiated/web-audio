@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Streaming WebAudio source buffer",
   "main": "dist/index.js",
-  "repository": "git@github.com:stayradiated/web-audio-stream.git",
+  "repository": "git@github.com:stayradiated/web-audio.git",
   "author": "George Czabania <george@czabania.com>",
   "license": "MIT",
   "srcPath": "lib",

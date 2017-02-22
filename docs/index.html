@@ -25,39 +25,6 @@
               
                 
                 <li><a
-                  href='#pumper'
-                  class=" toggle-sibling">
-                  Pumper
-                  <span class='icon'>▸</span>
-                </a>
-                
-                <div class='toggle-target display-none'>
-                  
-                  
-                    <ul class='list-reset py1-ul pl1'>
-                      <li class='h5'><span>Instance members</span></li>
-                      
-                      <li><a
-                        href='#Pumper#pump'
-                        class='regular pre-open'>
-                        #pump
-                      </a></li>
-                      
-                      <li><a
-                        href='#Pumper#cancel'
-                        class='regular pre-open'>
-                        #cancel
-                      </a></li>
-                      
-                    </ul>
-                  
-                  
-                </div>
-                
-                </li>
-              
-                
-                <li><a
                   href='#webaudio'
                   class=" toggle-sibling">
                   WebAudio
@@ -127,191 +94,6 @@
 
   
   <div class='clearfix'>
-    <h3 class='fl m0' id='pumper'>
-      Pumper
-    </h3>
-    
-  </div>
-  
-
-  <h1>Pumper</h1>
-<p>Create a new pumper, that will fill <code>buffer</code> with data.
-<code>onRead</code> will be called as the buffer is filled.</p>
-
-
-  <div class='pre p1 fill-light mt0'>new Pumper()</div>
-
-  
-
-  
-  
-  
-  
-  
-
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Properties</div>
-    <div>
-      
-        <div class='space-bottom0'>
-          <span class='code bold'>buffer</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>)</code>
-          
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <span class='code bold'>cancelled</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>)</code>
-          
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <span class='code bold'>done</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>)</code>
-          
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <span class='code bold'>onRead</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
-          
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
-    <div class="clearfix">
-  
-    <div class='border-bottom' id='Pumper#pump'>
-      <div class="clearfix small pointer toggle-sibling">
-        <div class="py1 contain">
-            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>pump(reader)</span>
-        </div>
-      </div>
-      <div class="clearfix display-none toggle-target">
-        <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-
-  <h1>pump</h1>
-<p>Start reading from a stream.</p>
-
-
-  <div class='pre p1 fill-light mt0'>pump(reader: ReadableStream)</div>
-
-  
-
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>reader</span> <code class='quiet'>(ReadableStream)</code> 
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-      </div>
-    </div>
-  
-    <div class='border-bottom' id='Pumper#cancel'>
-      <div class="clearfix small pointer toggle-sibling">
-        <div class="py1 contain">
-            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
-            <span class='code strong strong truncate'>cancel()</span>
-        </div>
-      </div>
-      <div class="clearfix display-none toggle-target">
-        <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-
-  <h1>cancel</h1>
-<p>Stop reading from the stream.</p>
-
-
-  <div class='pre p1 fill-light mt0'>cancel()</div>
-
-  
-
-  
-  
-  
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-      </div>
-    </div>
-  
-</div>
-
-  
-
-  
-</section>
-
-          
-        
-          
-            <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
     <h3 class='fl m0' id='webaudio'>
       WebAudio
     </h3>
@@ -359,7 +141,31 @@ track.</p>
                 <tr>
                   <td class='break-word'><span class='code bold'>options.context</span> <code class='quiet'>AudioContext</code>
                   </td>
-                  <td class='break-word'><span></span></td>
+                  <td class='break-word'><span>An instance of window.AudioContext.
+</span></td>
+                </tr>
+              
+                <tr>
+                  <td class='break-word'><span class='code bold'>options.throttleDecode</span> <code class='quiet'>[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>]</code>
+                  
+                    (default <code>500</code>)
+                  </td>
+                  <td class='break-word'><span>Number of milliseconds to
+throttle calls to the decode function, set this number too low and the
+browser will be tasked to decode many chunks, set it too high and there will
+be a delay after the chunk has been downloaded.
+</span></td>
+                </tr>
+              
+                <tr>
+                  <td class='break-word'><span class='code bold'>options.minLoadDuration</span> <code class='quiet'>[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>]</code>
+                  
+                    (default <code>1</code>)
+                  </td>
+                  <td class='break-word'><span>Minimum number of seconds
+required for a chunk of the track to be loaded, before it is played. This is
+useful to prevent a pause half a second after playback has started.
+</span></td>
                 </tr>
               
             </tbody>
@@ -394,49 +200,59 @@ track.</p>
       
         <div class='space-bottom0'>
           <span class='code bold'>loading</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>)</code>
-          
+          : Is a file currently being downloaded?
+
           
         </div>
       
         <div class='space-bottom0'>
           <span class='code bold'>paused</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>)</code>
-          
+          : Is the audio track currently paused (i.e not
+playing)?
+
           
         </div>
       
         <div class='space-bottom0'>
           <span class='code bold'>buffering</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>)</code>
-          
+          : Have we reached the end of the buffer?
+
           
         </div>
       
         <div class='space-bottom0'>
           <span class='code bold'>onProgress</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
-          
+          : Triggered when the audio buffer updates.
+
           
         </div>
       
         <div class='space-bottom0'>
           <span class='code bold'>onLoad</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
-          
+          : Triggered when we finish decoding the entire
+file.
+
           
         </div>
       
         <div class='space-bottom0'>
           <span class='code bold'>onPlay</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
-          
+          : Triggered after starting playback.
+
           
         </div>
       
         <div class='space-bottom0'>
           <span class='code bold'>onPause</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
-          
+          : Triggered after pausing playback.
+
           
         </div>
       
         <div class='space-bottom0'>
           <span class='code bold'>onStop</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
-          
+          : Triggered after stopping playback.
+
           
         </div>
       

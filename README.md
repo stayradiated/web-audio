@@ -19,8 +19,8 @@ const stream = new WebAudioStream({
   context: new window.AudioContext(),
 })
 
-stream.loadSrc('/files/audio.mp3')
+stream.loadSource('/files/audio.mp3')
 stream.play()
 
-console.log(stream.audioSrc) // underlying audio source buffer
+console.log(stream.audioSource) // underlying audio source
 ```
